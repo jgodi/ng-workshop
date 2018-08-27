@@ -1,5 +1,11 @@
 <div class="card">
   <div class="card-content">
     <span class="card-title">Top 5 Videos</span>
+    <div class="collection">
+      <a class="collection-item"
+         *ngFor="let video of videos">
+        {{ video.title }} <br/> by: {{ video.author }}
+      </a>
+    </div>
   </div>
 </div>
