@@ -1,5 +1,11 @@
 <div class="card">
   <div class="card-content">
     <span class="card-title">Player</span>
+    <div *ngIf="!video">
+      Select a video
+    </div>
+    <div *ngIf="video">
+      {{ video.title }}
+    </div>
   </div>
 </div>

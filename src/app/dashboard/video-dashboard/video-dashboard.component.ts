@@ -195,8 +195,13 @@ export class VideoDashboardComponent implements OnInit {
       ],
     },
   ];
+  selectedVideo: Video;
 
   constructor() {}
 
   ngOnInit() {}
+
+  setSelectedVideo(video: Video) {
+    this.selectedVideo = video;
+  }
 }
