@@ -6,7 +6,7 @@
          [class.active]="video.id === selectedVideo?.id"
          (click)="setActiveVideo(video)"
          *ngFor="let video of videos">
-        {{ video.title }} <br/> by: {{ video.author }}
+        <app-video-display [video]="video"></app-video-display>
       </a>
     </div>
   </div>

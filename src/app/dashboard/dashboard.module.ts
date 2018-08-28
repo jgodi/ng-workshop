@@ -6,6 +6,7 @@ import { VideoDashboardComponent } from './video-dashboard/video-dashboard.compo
 import { VideoListComponent } from './video-list/video-list.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { StatFiltersComponent } from './stat-filters/stat-filters.component';
+import { VideoDisplayComponent } from './video-display/video-display.component';
 
 @NgModule({
   imports: [CommonModule, DashboardRoutingModule],
@@ -14,6 +15,7 @@ import { StatFiltersComponent } from './stat-filters/stat-filters.component';
     VideoListComponent,
     VideoPlayerComponent,
     StatFiltersComponent,
+    VideoDisplayComponent,
   ],
 })
 export class DashboardModule {}
