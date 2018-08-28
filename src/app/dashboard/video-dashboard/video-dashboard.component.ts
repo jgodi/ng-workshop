@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Video } from '../interfaces';
+import { VideoLoaderService } from '../video-loader.service';
+import { Observable } from 'rxjs';
 
-const url = 'https://api.angularbootcamp.com/videos';
 
 @Component({
   selector: 'app-video-dashboard',
@@ -11,13 +12,11 @@ const url = 'https://api.angularbootcamp.com/videos';
   styleUrls: ['./video-dashboard.component.scss'],
 })
 export class VideoDashboardComponent implements OnInit {
-  videos: Video[];
+  videos: Observable<Video[]>;
   selectedVideo: Video;
 
-  constructor(http: HttpClient) {
-    http
-      .get<Video[]>(url)
-      .subscribe(videos => this.videos = videos);
+  constructor(svc: VideoLoaderService) {
+    this.videos = svc.loadVideos();
   }
 
   ngOnInit() {}
