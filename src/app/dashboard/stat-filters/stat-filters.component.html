@@ -1,5 +1,9 @@
 <div class="card">
   <div class="card-content">
     <span class="card-title">Filter</span>
+    <form [formGroup]="filters" (ngSubmit)="logForm()">
+      <input formGroupName="title">
+      <button class="btn">Log form</button>
+    </form>
   </div>
 </div>

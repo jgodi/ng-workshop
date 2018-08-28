@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-stat-filters',
@@ -6,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stat-filters.component.scss'],
 })
 export class StatFiltersComponent implements OnInit {
-  constructor() {}
+  filters: FormGroup;
 
+  constructor(fb: FormBuilder) {
+    this.filters = fb.group({
+      title: ['']
+    });
+  }
+  logForm() {
+    console.log(this.filters);
+  }
   ngOnInit() {}
 }
